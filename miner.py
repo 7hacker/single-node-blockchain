@@ -2,8 +2,7 @@ import time
 import random
 import threading
 
-from mesh.programs import Printer
-from mesh.node import Node
+from networking import Printer, Node
 
 
 class Miner:

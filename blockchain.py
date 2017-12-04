@@ -1,6 +1,4 @@
-from mesh.links import VirtualLink
-from mesh.programs import Switch
-from mesh.node import Node
+from networking import VirtualLink, Switch, Node
 
 from miner import Miner
 
