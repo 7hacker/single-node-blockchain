@@ -2,4 +2,9 @@ Single Node Blockchain (Work in Progress)
 
 Blockchain built on a Single Node with Python 3
 
-More to come in the README
+More to come in the README. If you're curious run it :)
+
+python blockchain.py
+
+Requirements:
+python 3
