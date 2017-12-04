@@ -1,16 +1,25 @@
 import time
 import random
+import threading
+
+from mesh.programs import Printer
+from mesh.node import Node
 
 
 class Miner:
-    def __init__(self, miner_id):
+    def __init__(self, miner_id, virtual_link):
         self.id = miner_id
-        self._miner_log("I am born!")
+        self.name = "miner-%d" % self.id
+        self.virtual_link = virtual_link
+        self.mine_thread = threading.Thread(target=self.mine)
+        self.mine_thread.setDaemon(True)
 
-    def _miner_log(self, log_str):
-        print("Miner-%d: %s" % (self.id, log_str))
+    def boot(self):
+        self.miner_node = Node([self.virtual_link], self.name, Program=Printer)
+        self.miner_node.start()
+        self.mine_thread.start()
 
     def mine(self):
         while True:
-            time.sleep(random.randint(1,10))
-            self._miner_log("Waking up to mine!")
+            self.miner_node.send(bytes("miner-%d: I mined some coinz!" % self.id, 'UTF-8'))
+            time.sleep(random.randint(5, 20))
