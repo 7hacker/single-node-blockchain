@@ -3,6 +3,7 @@ import random
 import threading
 
 from networking import Printer, Node
+from block import Block
 
 
 class Miner:
@@ -20,5 +21,6 @@ class Miner:
 
     def mine(self):
         while True:
-            self.miner_node.send(bytes("miner-%d: I mined some coinz!" % self.id, 'UTF-8'))
+            b = Block(self.name)
+            self.miner_node.send(b)
             time.sleep(random.randint(5, 20))
