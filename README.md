@@ -29,4 +29,8 @@ _Catch_ : One Node behaves as Switch that "broadcasts" packets to all nodes on t
 Thanks to the Repo's and Resources below:
 
 - https://github.com/pirate/mesh-networking
-
+- http://www.jenitennison.com/2015/05/21/blockchain.html
+- http://www.vamsitalkstech.com/?p=1451
+- https://medium.com/@micheledaliessi/how-does-the-blockchain-work-98c8cd01d2ae
+- https://www.youtube.com/watch?v=_160oMzblY8
+- https://www.youtube.com/watch?v=li3rfBAP_fE
