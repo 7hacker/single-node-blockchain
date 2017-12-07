@@ -9,16 +9,22 @@ More to come in the README. If you're curious run it :)
 `python blockchain.py`
 
 ### Requirements:
+
 `python 3`
 
 ### Overview:
+
 "Blockchain" is on a simulated "Internet"
+
 "Nodes" are "connected" on the "Internet".
+
 The Internet bootstraps all connections and builds a genesis block.
+
 "Nodes" are running "Programs" like "Miners".
 
 _Catch_ : One Node behaves as Switch that handles "broadcasting" packets. Yes this blockchain has a SPOF, deal with it 😎
 
+### Acks:
 
 Thanks to @pirate for : https://github.com/pirate/mesh-networking
 
